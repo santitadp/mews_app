@@ -1,7 +1,3 @@
 class Location < ActiveRecord::Base
-	
-	belongs_to :entry
-
-	validates :city, :state, :country, presence: true
-
+  belongs_to :entry
 end

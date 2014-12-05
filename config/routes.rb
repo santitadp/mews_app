@@ -1,4 +1,8 @@
 Rails.application.routes.draw do
+  resources :locations
+
+  resources :entries
+
   root 'welcome#index'
 
   get '/main', to: 'main#show'

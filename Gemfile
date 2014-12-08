@@ -34,6 +34,12 @@ group :production do
 	gem 'rails_12factor'
 end
 
+# Use feedjira to fetch and parse RSS feed content
+gem 'feedjira'
+
+# Use Google Geocoding API to visualize location on a map
+gem 'google-api-client'
+
 # Use ActiveModel has_secure_password
 # gem 'bcrypt', '~> 3.1.7'
 

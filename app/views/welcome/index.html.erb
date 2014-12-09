@@ -14,8 +14,21 @@
     <% @entries.each do |entry| %>
       <tr>
         <td><%= entry.title %></td>
-        <td><%= entry.summary %></td>
+        <td><%= strip_tags(entry.summary) %></td>
         <td><a href = "<%= entry.url %>">Link to Story</a></td>
+
+        	<% entry_location = entry.locations.find %>
+        	<% entry_locations each do |l| %>
+        	<%   l.city %>
+        	<% end %>
+
+        <td><iframe
+			  width="600"
+			  height="450"
+			  frameborder="0" style="border:0"
+			  src="https://www.google.com/maps/embed/v1/place?key=AIzaSyDUGXb9ZtDbM0lwnaLQCSVzh_Za48_2XgI
+			  &q=<%= entry_location %>">
+			</iframe></td>
       </tr>
     <% end %>
   </tbody>

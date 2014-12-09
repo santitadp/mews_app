@@ -1,5 +1,5 @@
 namespace :feeds do
-  desc "TODO"
+  desc "Get new post from Reuters RSS feed"
   task refresh: :environment do
   	require 'feedjira'
 

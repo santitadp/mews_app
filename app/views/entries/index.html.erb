@@ -1,4 +1,4 @@
-<h1>Listing entries</h1>
+<h1>Today's World News</h1>
 
 <table>
   <thead>
@@ -15,15 +15,8 @@
       <tr>
         <td><%= entry.title %></td>
         <td><%= entry.summary %></td>
-        <td><%= entry.url %></td>
-        <td><%= link_to 'Show', entry %></td>
-        <td><%= link_to 'Edit', edit_entry_path(entry) %></td>
-        <td><%= link_to 'Destroy', entry, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        <td><a href = "<%= entry.url %>">Link to Story</a></td>
       </tr>
     <% end %>
   </tbody>
 </table>
-
-<br>
-
-<%= link_to 'New Entry', new_entry_path %>

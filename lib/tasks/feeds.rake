@@ -12,15 +12,18 @@ namespace :feeds do
 
 		entries.each do |entry|
 		
-			summary = entry.summary	
+			e = Entry.create!(summary: entry.summary, title: entry.title, url: entry.url)	
 
 			regex = /(.*?)\s+\(Reuters\)/
-			
-			entry_location = regex.match(summary)
+			entry_location = regex.match(e.summary)
 
 			if entry_location
-				puts entry_location[1].split("/").inspect
+				locations = entry_location[1].split("/")
+
+				e.locations = locations.map{|l| Location.new(city: l)}
 			end
+
+			e.save
 		end
   end
 end

@@ -11,19 +11,25 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20141205015243) do
+ActiveRecord::Schema.define(version: 20141208230749) do
 
   create_table "entries", force: true do |t|
-    t.string "title"
-    t.string "summary"
-    t.string "url"
+    t.string   "title"
+    t.string   "summary"
+    t.string   "url"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "entries_locations", force: true do |t|
+    t.integer "entry_id"
+    t.integer "location_id"
   end
 
   create_table "locations", force: true do |t|
-    t.string  "city"
-    t.string  "state"
-    t.string  "country"
-    t.integer "entry_id"
+    t.string   "city"
+    t.datetime "created_at"
+    t.datetime "updated_at"
   end
 
 end

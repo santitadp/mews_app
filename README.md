@@ -11,7 +11,8 @@ App is available for view at: https://mappednews.herokuapp.com/
 
 ------
 
-*Fetching and Parsing Feeds*
+**Fetching and Parsing Feeds**
+
 Feeds are fetched and parsed using 'feedjira' gem
 
 		urls = ['http://feeds.reuters.com/Reuters/worldNews']
@@ -21,7 +22,8 @@ Feeds are fetched and parsed using 'feedjira' gem
 
 Feeds are refreshed once a day within tasks/feeds.rake
 
-*Display of news entries*
+**Display of news entries**
+
 The top 10 news are defined in the controller as:
 
 		@entries = Entry.limit(10).order(created_at: :desc)
@@ -41,7 +43,8 @@ Each location is displayed on the map using the Google Maps Embed API:
                &q=<%= location.city %>">  
          </iframe>
 
-*Future Improvements:*
+**Future Improvements:**
+
 * Improve feeds regex in cases where cities are undefined
 * Improve feeds regex in cases where '(Reuters)' is not present
 * Display news items on the same map, with links to the article

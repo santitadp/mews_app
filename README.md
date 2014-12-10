@@ -7,6 +7,8 @@ Rails Version 4.1.7
 This MEWS App takes the latest 10 news from Reuters RSS feed.
 Each news entries are displayed on a map using the Google Maps Embed API.
 
+App is available for view at: https://mappednews.herokuapp.com/
+
 ------
 
 *Fetching and Parsing Feeds*

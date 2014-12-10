@@ -14,9 +14,9 @@
 ActiveRecord::Schema.define(version: 20141208230749) do
 
   create_table "entries", force: true do |t|
-    t.string   "title"
-    t.string   "summary"
-    t.string   "url"
+    t.text     "title"
+    t.text     "summary"
+    t.text     "url"
     t.datetime "created_at"
     t.datetime "updated_at"
   end

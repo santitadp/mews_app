@@ -39,7 +39,7 @@ Each location is displayed on the map using the Google Maps Embed API:
                width="200"
                height="125"
                frameborder="1" style="border:0"
-               src="https://www.google.com/maps/embed/v1/place?key=AIzaSyDUGXb9ZtDbM0lwnaLQCSVzh_Za48_2XgI
+               src="https://www.google.com/maps/embed/v1/place?key=[GOOGLE_API_KEY]
                &q=<%= location.city %>">  
          </iframe>
 
